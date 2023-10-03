@@ -7,3 +7,5 @@ if pattern_password.match(password):
     print("Valid password!")
 else:
     print("Invalid password! The password must contain one uppercase letter, one lowercase letter, one digit, one symbol, and have a length of 8 to 16 characters.")
+
+    
