@@ -1,19 +1,9 @@
-# Валідація для домашнього номеру телефону
+import re
 
-home_phone_regex = r'^\d{6,10}$'
+pattern_password = re.compile(r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$')
+password = input("Enter your password. The password must contain one uppercase letter, one lowercase letter, one digit, one symbol, and have a length of 8 to 16 characters.: ")
 
-# Валідація мобільного номеру телефону
-
-mobile_phone_regex = r'^\+?\d{10,12}$'
-
-# Валідація email
-
-email_regex = r'^[a-zA-Z0-9._%+-]{1,50}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$'
-
-# Валідація ПІБ
-
-name_regex = r'^[A-Za-zА-Яа-яІіЇїҐґ]{2,20}\s[A-Za-zА-Яа-яІіЇїҐґ]{2,20}\s[A-Za-zА-Яа-яІіЇїҐґ]{2,20}$'
-
-# Валідація Пароля
-
-password_regex = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,16}$'
+if pattern_password.match(password):
+    print("Valid password!")
+else:
+    print("Invalid password! The password must contain one uppercase letter, one lowercase letter, one digit, one symbol, and have a length of 8 to 16 characters.")
