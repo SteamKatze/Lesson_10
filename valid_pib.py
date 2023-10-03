@@ -8,4 +8,3 @@ if pattern_full_name.match(full_name):
 else:
     print("Invalid full name!")
 
-    
